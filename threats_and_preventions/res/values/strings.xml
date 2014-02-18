@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">threats_and_preventions</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_string">Threats and Preventions Fundamentals</string>
+    <string name="threats_button">Threats</string>
+    <string name="preventions_button">Preventions</string>
+    <string name="quiz_button">Quiz Challenge</string>
+    <string name="title_activity_threats_menu">ThreatsMenu</string>
+    <string name="title_activity_preventions_menu">PreventionsMenu</string>
+    <string name="threat_menu">Threats</string>
+    <string name="denial_of_service_button">Denial Of Service</string>
+    <string name="virus_button">Virus</string>
+    <string name="title_activity_dos_info">DosInfo</string>
+    <string name="dos_descr">In computing, a denial-of-service (DoS) or distributed denial-of-service (DDoS) attack is an attempt to make a machine or network resource unavailable to its intended users. Although the means to carry out, motives for, and targets of a DoS attack may vary, it generally consists of efforts to temporarily or indefinitely interrupt or suspend services of a host connected to the Internet.</string>
+    <string name="title_activity_virus_info">VirusInfo</string>
+    <string name="virus_description">A computer virus is a type of malware that, when executed, replicates by inserting copies of itself (possibly modified) into other computer programs, data files, or the boot sector of the hard drive; when this replication succeeds, the affected areas are then said to be infected. Viruses often perform some type of harmful activity on infected hosts, such as stealing hard disk space or CPU time, accessing private information, corrupting data, displaying political or humorous messages on the user\'s screen, spamming their contacts, or logging their keystrokes. However, not all viruses carry a destructive payload or attempt to hide themselves—the defining characteristic of viruses is that they are self-replicating computer programs which install themselves without the user\'s consent. </string>
+    <string name="ok">OK</string>
+
+</resources>
