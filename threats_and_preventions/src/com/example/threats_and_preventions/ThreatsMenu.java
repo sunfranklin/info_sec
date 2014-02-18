@@ -19,6 +19,8 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 		btnDOS.setOnClickListener(this);
 		View btnVirus = (Button) findViewById(R.id.virus_button);
 		btnVirus.setOnClickListener(this);
+		View btnSniffer = (Button) findViewById(R.id.sniffer_button);
+		btnSniffer.setOnClickListener(this);
 	}
 
 	@Override
@@ -37,6 +39,9 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 			break;
 		case R.id.virus_button:
 			startActivity(new Intent(this, VirusInfo.class));
+			break;
+		case R.id.sniffer_button:
+			startActivity(new Intent(this, SnifferInfo.class));
 			break;
 		}
 	}
