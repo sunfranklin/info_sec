@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
@@ -13,6 +14,7 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_threats_menu);
 		
 		View btnDOS = (Button) findViewById(R.id.denial_of_service_button);
@@ -21,6 +23,8 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 		btnVirus.setOnClickListener(this);
 		View btnSniffer = (Button) findViewById(R.id.sniffer_button);
 		btnSniffer.setOnClickListener(this);
+		View btnBack = (Button) findViewById(R.id.back_button);
+		btnBack.setOnClickListener(this);		
 	}
 
 	@Override
@@ -32,7 +36,6 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch(v.getId()) {
 		case R.id.denial_of_service_button:
 			startActivity(new Intent(this, DosInfo.class));
@@ -42,6 +45,9 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 			break;
 		case R.id.sniffer_button:
 			startActivity(new Intent(this, SnifferInfo.class));
+			break;
+		case R.id.back_button:
+			startActivity(new Intent(this, MainActivity.class));
 			break;
 		}
 	}

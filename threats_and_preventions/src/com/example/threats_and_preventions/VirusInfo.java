@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
@@ -13,10 +14,13 @@ public class VirusInfo extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_virus_info);
 		
 		View btnOK = (Button) findViewById(R.id.ok_button);
 		btnOK.setOnClickListener(this);
+		View btnBack = (Button) findViewById(R.id.back_button);
+		btnBack.setOnClickListener(this);		
 	}
 
 	@Override
@@ -32,6 +36,9 @@ public class VirusInfo extends Activity implements OnClickListener {
 		case R.id.ok_button:
 			startActivity(new Intent(this, ThreatsMenu.class));
 			break;
+		case R.id.back_button:
+			startActivity(new Intent(this, ThreatsMenu.class));
+			break;			
 		}
 	}
 

@@ -21,5 +21,6 @@
     <string name="title_activity_sniffer_info">SnifferInfo</string>
     <string name="hello_world">Hello world!</string>
     <string name="sniffer_description">Program or device that monitors data traveling over a network; can be used both for legitimate purposes and for stealing information from a network</string>
+    <string name="prevention_title">Preventions</string>
 
 </resources>
