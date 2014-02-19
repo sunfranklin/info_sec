@@ -17,5 +17,9 @@
     <string name="title_activity_virus_info">VirusInfo</string>
     <string name="virus_description">A computer virus is a type of malware that, when executed, replicates by inserting copies of itself (possibly modified) into other computer programs, data files, or the boot sector of the hard drive; when this replication succeeds, the affected areas are then said to be infected. Viruses often perform some type of harmful activity on infected hosts, such as stealing hard disk space or CPU time, accessing private information, corrupting data, displaying political or humorous messages on the user\'s screen, spamming their contacts, or logging their keystrokes. However, not all viruses carry a destructive payload or attempt to hide themselves—the defining characteristic of viruses is that they are self-replicating computer programs which install themselves without the user\'s consent. </string>
     <string name="ok">OK</string>
+    <string name="sniffer_button">Sniffer</string>
+    <string name="title_activity_sniffer_info">SnifferInfo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="sniffer_description">Program or device that monitors data traveling over a network; can be used both for legitimate purposes and for stealing information from a network</string>
 
 </resources>

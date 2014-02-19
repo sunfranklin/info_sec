@@ -38,6 +38,14 @@
             android:name="com.example.threats_and_preventions.VirusInfo"
             android:label="@string/title_activity_virus_info" >
         </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.SnifferInfo"
+            android:label="@string/title_activity_sniffer_info"
+            android:parentActivityName="com.example.threats_and_preventions.ThreatsMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.threats_and_preventions.ThreatsMenu" />
+        </activity>
     </application>
 
 </manifest>

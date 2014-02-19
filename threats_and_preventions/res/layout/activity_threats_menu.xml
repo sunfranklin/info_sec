@@ -33,5 +33,13 @@
         android:layout_below="@+id/denial_of_service_button"
         android:layout_centerHorizontal="true"
         android:text="@string/virus_button" />
+
+    <Button
+        android:id="@+id/sniffer_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/virus_button"
+        android:layout_below="@+id/virus_button"
+        android:text="@string/sniffer_button" />
     
 </RelativeLayout>
