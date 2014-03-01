@@ -1,7 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".TrojanInfo" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ThreatsMenu" >
 
     <LinearLayout
@@ -20,7 +25,8 @@
             android:layout_height="match_parent"
             android:background="#971425"
             android:text="Back"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="0dip"
@@ -57,5 +63,62 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/header"
         android:text="@string/denial_of_service_button" />
+
+    <Button
+        android:id="@+id/spoof_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sniffer_button"
+        android:text="@string/spoof_button" />
+
+    <Button
+        android:id="@+id/phishing_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spoof_button"
+        android:text="@string/phishing_button" />
+
+    <Button
+        android:id="@+id/pharming_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/phishing_button"
+        android:text="@string/pharming_button" />
+
+    <Button
+        android:id="@+id/middleman_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pharming_button"
+        android:text="@string/middleman_button" />
+
+    <Button
+        android:id="@+id/spam_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/middleman_button"
+        android:text="@string/spam_button" />
+
+    <Button
+        android:id="@+id/passwordcrack_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spam_button"
+        android:text="@string/passwordcrack_button" />
+
+    <Button
+        android:id="@+id/trojan_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/passwordcrack_button"
+        android:text="@string/trojan_button" />
     
 </RelativeLayout>
+</ScrollView> 

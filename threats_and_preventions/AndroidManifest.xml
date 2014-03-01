@@ -46,6 +46,34 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.threats_and_preventions.ThreatsMenu" />
         </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.Spoofing_info"
+            android:label="@string/title_activity_spoofing_info" >
+        </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.PhishingInfo"
+            android:label="@string/title_activity_phishing_info" >
+        </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.PharmingInfo"
+            android:label="@string/title_activity_pharming_info" >
+        </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.MiddlemanInfo"
+            android:label="@string/title_activity_middleman_info" >
+        </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.SpamInfo"
+            android:label="@string/title_activity_spam_info" >
+        </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.PasswordcrackInfo"
+            android:label="@string/title_activity_passwordcrack_info" >
+        </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.TrojanInfo"
+            android:label="@string/title_activity_trojan_info" >
+        </activity>
     </application>
 
 </manifest>

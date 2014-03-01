@@ -23,6 +23,20 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 		btnVirus.setOnClickListener(this);
 		View btnSniffer = (Button) findViewById(R.id.sniffer_button);
 		btnSniffer.setOnClickListener(this);
+		View btnSpoof = (Button) findViewById(R.id.spoof_button);
+		btnSpoof.setOnClickListener(this);
+		View btnPhishing = (Button) findViewById(R.id.phishing_button);
+		btnPhishing.setOnClickListener(this);
+		View btnPharming = (Button) findViewById(R.id.pharming_button);
+		btnPharming.setOnClickListener(this);
+		View btnMiddleman = (Button) findViewById(R.id.middleman_button);
+		btnMiddleman.setOnClickListener(this);
+		View btnSpam = (Button) findViewById(R.id.spam_button);
+		btnSpam.setOnClickListener(this);
+		View btnPasswordcrack = (Button) findViewById(R.id.passwordcrack_button);
+		btnPasswordcrack.setOnClickListener(this);
+		View btnTrojan = (Button) findViewById(R.id.trojan_button);
+		btnTrojan.setOnClickListener(this);
 		View btnBack = (Button) findViewById(R.id.back_button);
 		btnBack.setOnClickListener(this);		
 	}
@@ -45,6 +59,27 @@ public class ThreatsMenu extends Activity implements OnClickListener {
 			break;
 		case R.id.sniffer_button:
 			startActivity(new Intent(this, SnifferInfo.class));
+			break;
+		case R.id.spoof_button:
+			startActivity(new Intent(this, Spoofing_info.class));
+			break;
+		case R.id.phishing_button:
+			startActivity(new Intent(this, PhishingInfo.class));
+			break;
+		case R.id.pharming_button:
+			startActivity(new Intent(this, PharmingInfo.class));
+			break;
+		case R.id.middleman_button:
+			startActivity(new Intent(this, MiddlemanInfo.class));
+			break;
+		case R.id.spam_button:
+			startActivity(new Intent(this, SpamInfo.class));
+			break;
+		case R.id.passwordcrack_button:
+			startActivity(new Intent(this, PasswordcrackInfo.class));
+			break;
+		case R.id.trojan_button:
+			startActivity(new Intent(this, TrojanInfo.class));
 			break;
 		case R.id.back_button:
 			startActivity(new Intent(this, MainActivity.class));

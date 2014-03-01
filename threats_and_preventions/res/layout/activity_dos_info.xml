@@ -45,13 +45,32 @@
         android:layout_marginRight="10dp"
         android:text="@string/dos_descr" />
 
-    <Button
-        android:id="@+id/ok_button"
+    <TextView
+        android:id="@+id/preventions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dos_descr"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/ok" />
+        android:layout_marginTop="14dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text="@string/preventions" />
+
+     <TextView
+         android:id="@+id/dos_prev"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/dos_descr"
+         android:layout_below="@+id/preventions"
+         android:text="@string/dos_prev" />
+
+     <Button
+         android:id="@+id/ok_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/dos_prev"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="26dp"
+         android:text="@string/ok" />
 
 </RelativeLayout>

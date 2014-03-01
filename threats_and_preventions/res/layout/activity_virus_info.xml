@@ -1,7 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".VirusInfo" >
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".VirusInfo" >
 
     <LinearLayout
@@ -20,7 +25,8 @@
             android:layout_height="match_parent"
             android:background="#971425"
             android:text="Back"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="0dip"
@@ -45,13 +51,37 @@
         android:layout_marginRight="10dp"
         android:text="@string/virus_description" />
 
-    <Button
-        android:id="@+id/ok_button"
+    <TextView
+        android:id="@+id/preventions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/virus_description"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/preventions"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    
+    
+
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/virus_prev"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
         android:text="@string/ok" />
 
+    <TextView
+        android:id="@+id/virus_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/preventions"
+        android:layout_marginTop="22dp"
+        android:text="@string/virus_prev" />
+
 </RelativeLayout>
+
+</ScrollView>

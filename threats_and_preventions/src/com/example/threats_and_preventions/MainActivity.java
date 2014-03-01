@@ -19,8 +19,6 @@ public class MainActivity extends Activity implements OnClickListener {
         
 		View btnThreats = (Button) findViewById(R.id.threats_button);
 		btnThreats.setOnClickListener(this);
-		View btnPrev = (Button) findViewById(R.id.preventions_button);
-		btnPrev.setOnClickListener(this);
 		View btnQuiz = (Button) findViewById(R.id.quiz_button);
 		btnQuiz.setOnClickListener(this);
     }
@@ -39,9 +37,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.threats_button:
 			startActivity(new Intent(this, ThreatsMenu.class));;
-			break;
-		case R.id.preventions_button:
-			startActivity(new Intent(this, PreventionsMenu.class));;
 			break;
 		case R.id.quiz_button:
 			finish();
