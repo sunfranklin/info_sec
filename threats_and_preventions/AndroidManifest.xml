@@ -74,6 +74,10 @@
             android:name="com.example.threats_and_preventions.TrojanInfo"
             android:label="@string/title_activity_trojan_info" >
         </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.QuizActivity"
+            android:label="@string/title_activity_threats_menu" >
+        </activity>
     </application>
 
 </manifest>

@@ -21,47 +21,54 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int background=0x7f020000;
+        public static final int button_shape=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080025;
+        public static final int A_button=0x7f080013;
+        public static final int B_button=0x7f080014;
+        public static final int C_button=0x7f080015;
+        public static final int D_button=0x7f080016;
+        public static final int action_settings=0x7f08002a;
         public static final int back_button=0x7f080001;
-        public static final int denial_of_service_button=0x7f080018;
+        public static final int denial_of_service_button=0x7f08001d;
         public static final int dos_descr=0x7f080002;
         public static final int dos_prev=0x7f080004;
         public static final int header=0x7f080000;
-        public static final int middleman_button=0x7f08001d;
+        public static final int middleman_button=0x7f080022;
         public static final int middleman_description=0x7f080009;
         public static final int middleman_prev=0x7f08000a;
         public static final int ok_button=0x7f080005;
-        public static final int passwordcrack_button=0x7f08001f;
+        public static final int passwordcrack_button=0x7f080024;
         public static final int passwordcrack_description=0x7f08000b;
         public static final int passwordcrack_prev=0x7f08000c;
-        public static final int pharming_button=0x7f08001c;
+        public static final int pharming_button=0x7f080021;
         public static final int pharming_description=0x7f08000d;
         public static final int pharming_prev=0x7f08000e;
-        public static final int phishing_button=0x7f08001b;
+        public static final int phishing_button=0x7f080020;
         public static final int phishing_description=0x7f08000f;
         public static final int phishing_prev=0x7f080010;
         public static final int preventions=0x7f080003;
+        public static final int question=0x7f080012;
         public static final int quiz_button=0x7f080008;
-        public static final int sniffer_button=0x7f080019;
-        public static final int sniffer_description=0x7f080012;
-        public static final int sniffer_prev=0x7f080013;
-        public static final int spam_button=0x7f08001e;
-        public static final int spam_description=0x7f080014;
-        public static final int spam_prev=0x7f080015;
-        public static final int spoof_button=0x7f08001a;
-        public static final int spoof_description=0x7f080016;
-        public static final int spoof_prev=0x7f080017;
+        public static final int sniffer_button=0x7f08001e;
+        public static final int sniffer_description=0x7f080017;
+        public static final int sniffer_prev=0x7f080018;
+        public static final int spam_button=0x7f080023;
+        public static final int spam_description=0x7f080019;
+        public static final int spam_prev=0x7f08001a;
+        public static final int spoof_button=0x7f08001f;
+        public static final int spoof_description=0x7f08001b;
+        public static final int spoof_prev=0x7f08001c;
         public static final int textView1=0x7f080006;
         public static final int threats_button=0x7f080007;
-        public static final int trojan_button=0x7f080020;
-        public static final int trojan_description=0x7f080021;
-        public static final int trojan_prev=0x7f080022;
+        public static final int trojan_button=0x7f080025;
+        public static final int trojan_description=0x7f080026;
+        public static final int trojan_prev=0x7f080027;
         public static final int virus_button=0x7f080011;
-        public static final int virus_description=0x7f080023;
-        public static final int virus_prev=0x7f080024;
+        public static final int virus_description=0x7f080028;
+        public static final int virus_prev=0x7f080029;
     }
     public static final class layout {
         public static final int activity_dos_info=0x7f030000;
@@ -71,12 +78,13 @@ public final class R {
         public static final int activity_pharming_info=0x7f030004;
         public static final int activity_phishing_info=0x7f030005;
         public static final int activity_preventions_menu=0x7f030006;
-        public static final int activity_sniffer_info=0x7f030007;
-        public static final int activity_spam_info=0x7f030008;
-        public static final int activity_spoofing_info=0x7f030009;
-        public static final int activity_threats_menu=0x7f03000a;
-        public static final int activity_trojan_info=0x7f03000b;
-        public static final int activity_virus_info=0x7f03000c;
+        public static final int activity_quiz=0x7f030007;
+        public static final int activity_sniffer_info=0x7f030008;
+        public static final int activity_spam_info=0x7f030009;
+        public static final int activity_spoofing_info=0x7f03000a;
+        public static final int activity_threats_menu=0x7f03000b;
+        public static final int activity_trojan_info=0x7f03000c;
+        public static final int activity_virus_info=0x7f03000d;
     }
     public static final class menu {
         public static final int dos_info=0x7f070000;

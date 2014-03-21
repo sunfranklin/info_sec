@@ -39,7 +39,8 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(new Intent(this, ThreatsMenu.class));;
 			break;
 		case R.id.quiz_button:
-			finish();
+//			finish();
+			startActivity(new Intent(this, QuizActivity.class));
 			break;
 		}
 	}
