@@ -33,44 +33,59 @@
             android:textStyle="bold" />
     
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/dos_descr"
+    
+    <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/header"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:text="@string/dos_descr" />
+        android:layout_below="@+id/header">
+        
+        <RelativeLayout 
+            android:id="@+id/rellayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/preventions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dos_descr"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:text="@string/preventions" />
+		    <TextView
+		        android:id="@+id/dos_descr"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:text="@string/dos_descr" />
+		
+		    <TextView
+		        android:id="@+id/preventions"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/dos_descr"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="14dp"
+		        android:textSize="22sp"
+		        android:textStyle="bold"
+		        android:text="@string/preventions" />
+		
+		     <TextView
+		         android:id="@+id/dos_prev"
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:layout_alignLeft="@+id/dos_descr"
+		         android:layout_below="@+id/preventions"
+		         android:text="@string/dos_prev" />
+		     
+		    <Button
+		        android:id="@+id/ok_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/dos_prev"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="26dp"
+		        android:text="@string/ok" />		     
+		     
+		</RelativeLayout>		     
+		     
+	</ScrollView>		     
 
-     <TextView
-         android:id="@+id/dos_prev"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/dos_descr"
-         android:layout_below="@+id/preventions"
-         android:text="@string/dos_prev" />
-
-     <Button
-         android:id="@+id/ok_button"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_below="@+id/dos_prev"
-         android:layout_centerHorizontal="true"
-         android:layout_marginTop="26dp"
-         android:text="@string/ok" />
 
 </RelativeLayout>

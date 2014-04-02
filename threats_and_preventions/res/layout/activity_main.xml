@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context=".MainActivity" >
     
     <TextView
@@ -15,6 +16,7 @@
         android:layout_marginTop="69dp"
         android:gravity="center"
         android:textSize="32sp"
+        android:textColor="#ffffff"
         android:text="@string/title_string"
 		/>
 
@@ -25,14 +27,17 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="26dp"
+        android:background="#ffffff"
         android:text="@string/threats_button" />
 
     <Button
         android:id="@+id/quiz_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/threats_button"
+        android:background="#ffffff"        
         android:text="@string/quiz_button" />
 
 </RelativeLayout>

@@ -1,10 +1,5 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".VirusInfo" >
-
-<RelativeLayout 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".VirusInfo" >
@@ -39,49 +34,58 @@
             android:textStyle="bold" />
     
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/virus_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/header"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:text="@string/virus_description" />
-
-    <TextView
-        android:id="@+id/preventions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/virus_description"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:text="@string/preventions"
-        android:textSize="22sp"
-        android:textStyle="bold" />
     
-    
-
-    <Button
-        android:id="@+id/ok_button"
+    <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/virus_prev"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="@string/ok" />
+        android:layout_below="@+id/header">
+        
+        <RelativeLayout 
+            android:id="@+id/rellayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"> 
+            
+		    <TextView
+		        android:id="@+id/virus_description"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:text="@string/virus_description" />
+		
+		    <TextView
+		        android:id="@+id/preventions"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/virus_description"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="17dp"
+		        android:text="@string/preventions"
+		        android:textSize="22sp"
+		        android:textStyle="bold" />
+		
+		    <TextView
+		        android:id="@+id/virus_prev"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/preventions"
+		        android:layout_marginTop="22dp"
+		        android:text="@string/virus_prev" />
+		    
+		    <Button
+		        android:id="@+id/ok_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/virus_prev"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="26dp"
+		        android:text="@string/ok" />		    
+	    </RelativeLayout>
+    </ScrollView>
 
-    <TextView
-        android:id="@+id/virus_prev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/preventions"
-        android:layout_marginTop="22dp"
-        android:text="@string/virus_prev" />
 
 </RelativeLayout>
-
-</ScrollView>

@@ -15,6 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.threats_and_preventions.MainActivity"
+            android:screenOrientation="portrait"            
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,22 +25,27 @@
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.ThreatsMenu"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_threats_menu" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.PreventionsMenu"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_preventions_menu" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.DosInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_dos_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.VirusInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_virus_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.SnifferInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_sniffer_info"
             android:parentActivityName="com.example.threats_and_preventions.ThreatsMenu" >
             <meta-data
@@ -48,34 +54,42 @@
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.Spoofing_info"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_spoofing_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.PhishingInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_phishing_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.PharmingInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_pharming_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.MiddlemanInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_middleman_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.SpamInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_spam_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.PasswordcrackInfo"
+            android:screenOrientation="portrait"                        
             android:label="@string/title_activity_passwordcrack_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.TrojanInfo"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_trojan_info" >
         </activity>
         <activity
             android:name="com.example.threats_and_preventions.QuizActivity"
+            android:screenOrientation="portrait"            
             android:label="@string/title_activity_threats_menu" >
         </activity>
     </application>

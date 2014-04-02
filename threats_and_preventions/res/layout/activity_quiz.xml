@@ -24,64 +24,78 @@
             android:textStyle="bold" />
      </LinearLayout>
      
-     <TextView
-        android:id="@+id/question"
+    <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:ems="18"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/header"
-        android:textColor="#ffffff"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-    
+        android:layout_below="@+id/header">
+        
+        <RelativeLayout 
+            android:id="@+id/rellayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">     
      
-     <Button
-         android:id="@+id/A_button"
-         android:layout_width="250dp"
-         android:layout_height="wrap_content"
-         android:layout_centerHorizontal="true"
-         android:layout_marginTop="20dp"
-         android:textSize="14sp"
-         android:textStyle="bold"
-         android:layout_below="@+id/question"
-         android:background="@drawable/button_shape" />
-
-     <Button
-        android:id="@+id/B_button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/A_button" 
-        android:background="@drawable/button_shape" />
-
-     <Button
-        android:id="@+id/C_button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/B_button"
-        android:background="@drawable/button_shape" />
-
-     <Button
-        android:id="@+id/D_button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/C_button"
-        android:background="@drawable/button_shape" />
+		     <TextView
+		        android:id="@+id/question"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:layout_marginTop="45dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:ems="18"
+		        android:layout_centerHorizontal="true"
+		        android:textColor="#ffffff"
+		        android:textSize="15sp"
+		        android:textStyle="bold" />
+		    
+		     
+		     <Button
+		         android:id="@+id/A_button"
+		         android:layout_width="250dp"
+		         android:layout_height="wrap_content"
+		         android:layout_centerHorizontal="true"
+		         android:layout_marginTop="20dp"
+		         android:textSize="14sp"
+		         android:textStyle="bold"
+		         android:layout_below="@+id/question"
+		         android:background="@drawable/button_shape" />
+		
+		     <Button
+		        android:id="@+id/B_button"
+		        android:layout_width="250dp"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="10dp"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:layout_below="@+id/A_button" 
+		        android:background="@drawable/button_shape" />
+		
+		     <Button
+		        android:id="@+id/C_button"
+		        android:layout_width="250dp"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:layout_marginTop="10dp"
+		        android:layout_below="@+id/B_button"
+		        android:background="@drawable/button_shape" />
+		
+		     <Button
+		        android:id="@+id/D_button"
+		        android:layout_width="250dp"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="10dp"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:layout_below="@+id/C_button"
+		        android:background="@drawable/button_shape" />
+		     
+	     </RelativeLayout>
+	     
+    </ScrollView>
 
 </RelativeLayout>

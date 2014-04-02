@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".TrojanInfo" >
 
 <RelativeLayout
@@ -15,7 +16,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="#971425"
+        android:background="@drawable/background"
         android:orientation="horizontal" 
         android:weightSum="6">
 
@@ -23,7 +24,7 @@
             android:id="@+id/back_button"
             android:layout_width="48dp"
             android:layout_height="match_parent"
-            android:background="#971425"
+            android:background="@drawable/background"
             android:text="Back"
             android:textColor="#ffffff"
             tools:ignore="HardcodedText" />
@@ -44,6 +45,7 @@
         android:id="@+id/virus_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_below="@+id/denial_of_service_button"
         android:layout_centerHorizontal="true"
         android:text="@string/virus_button" />
@@ -52,6 +54,7 @@
         android:id="@+id/sniffer_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"
         android:layout_alignLeft="@+id/virus_button"
         android:layout_below="@+id/virus_button"
         android:text="@string/sniffer_button" />
@@ -60,6 +63,7 @@
         android:id="@+id/denial_of_service_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/header"
         android:text="@string/denial_of_service_button" />
@@ -68,6 +72,7 @@
         android:id="@+id/spoof_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/sniffer_button"
         android:text="@string/spoof_button" />
@@ -76,6 +81,7 @@
         android:id="@+id/phishing_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/spoof_button"
         android:text="@string/phishing_button" />
@@ -84,6 +90,7 @@
         android:id="@+id/pharming_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/phishing_button"
         android:text="@string/pharming_button" />
@@ -92,6 +99,7 @@
         android:id="@+id/middleman_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/pharming_button"
         android:text="@string/middleman_button" />
@@ -100,6 +108,7 @@
         android:id="@+id/spam_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/middleman_button"
         android:text="@string/spam_button" />
@@ -108,6 +117,7 @@
         android:id="@+id/passwordcrack_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/spam_button"
         android:text="@string/passwordcrack_button" />
@@ -116,6 +126,7 @@
         android:id="@+id/trojan_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/passwordcrack_button"
         android:text="@string/trojan_button" />
