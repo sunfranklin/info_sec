@@ -4,6 +4,7 @@ import java.util.Random;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -161,6 +162,11 @@ public class QuizActivity extends Activity implements OnClickListener {
 			
 			if (questAns.size() > 0) 
 				SetQuestionAnswers(question, a_button, b_button, c_button, d_button);
+			else {
+				Intent intent = new Intent(QuizActivity.this, QuizResultsActivity.class);
+				intent.putExtra("correct", correct_answers);
+				startActivity(intent);
+			}
 
 			// You could do this call if you wanted it to be periodic:
 			//mHandler.postDelayed(this, 5000 );

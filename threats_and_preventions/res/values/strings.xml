@@ -54,5 +54,9 @@
     <string name="trojan_button">Trojan</string>
     <string name="trojan_description">Software programs that hide their true nature and reveal their designed behavoir only when activated. They are frequently disguised as helpful, interesting, or necessary pieces of software (README.exe). They are often included with shareware or freeware packages.</string>
     <string name="trojan_prev">Never click on links in unsolicited emails. Install an anti-virus and browser security software and keep it up-to-date. Be careful downloading executable files or zip files from the internet or via email.</string>
+    <string name="home">Home</string>
+    <string name="quizresults">Quiz Results</string>
+    <string name="quiz_results">Quiz Results</string>
+    <string name="back">Back</string>
 
 </resources>

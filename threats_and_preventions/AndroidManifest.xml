@@ -92,6 +92,11 @@
             android:screenOrientation="portrait"            
             android:label="@string/title_activity_threats_menu" >
         </activity>
+        <activity
+            android:name="com.example.threats_and_preventions.QuizResultsActivity"
+            android:screenOrientation="portrait"            
+            android:label="@string/quizresults" >
+        </activity>
     </application>
 
 </manifest>
