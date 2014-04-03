@@ -22,6 +22,8 @@ public class QuizActivity extends Activity implements OnClickListener {
 	List<QuestionAnswerID> questAns;
 	String correctAnswer;
 	private Handler mHandler = new Handler();
+	private int question_counter = 1;
+	private int correct_answers;
 	
 	//Buttons View
 	Button  a_button;
@@ -105,11 +107,18 @@ public class QuizActivity extends Activity implements OnClickListener {
 		{
 //		    chosenOpt.setTextColor(0xff46D246);
 			v.setBackgroundColor(0xff00ff00);
+			correct_answers++;
 		}
 		else {
 //			chosenOpt.setTextColor(0xff971425);
 			v.setBackgroundColor(0xffd11919);
 		}
+	    
+	    //disable buttons so more than one answer isn't selected
+	    a_button.setEnabled(false);
+	    b_button.setEnabled(false);
+	    c_button.setEnabled(false);
+	    d_button.setEnabled(false);
 
 	    //Cause the Runnable to be sent to the Handler after a specified delay in ms:
 	    mHandler.postDelayed(mUpdateTimeTask, 2000);
@@ -181,7 +190,8 @@ public class QuizActivity extends Activity implements OnClickListener {
         QuestionAnswerID questionAnswer = questAns.remove(questAnsPosition);
         
         //set question equal to the current question of the quiz 
-        question.setText(questionAnswer.getQuestion());
+        question.setText("Question "+question_counter+": "+questionAnswer.getQuestion());
+        question_counter++;
         
         //get the correct answer
         correctAnswer = questionAnswer.getAnswer();
@@ -233,6 +243,12 @@ public class QuizActivity extends Activity implements OnClickListener {
         		c.setText(wrongAnswer3);
         		break;
         }  
+        
+        // re-enable all the buttons
+        a_button.setEnabled(true);
+	    b_button.setEnabled(true);
+	    c_button.setEnabled(true);
+	    d_button.setEnabled(true);
 	}
 	
 }
