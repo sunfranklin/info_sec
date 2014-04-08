@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DosInfo" >
+    tools:context=".DosInfo"
+    android:background="@drawable/background" >
     
     <LinearLayout
         android:id="@+id/header"
@@ -10,7 +11,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="#971425"
+        android:background="#ffffff"
         android:orientation="horizontal" 
         android:weightSum="6">
 
@@ -18,9 +19,8 @@
             android:id="@+id/back_button"
             android:layout_width="48dp"
             android:layout_height="match_parent"
-            android:background="#971425"
             android:text="@string/back"
-            android:textColor="#ffffff" />
+            android:background="#ffffff" />
 
         <TextView
             android:layout_width="0dip"
@@ -28,7 +28,7 @@
             android:layout_weight="5"
             android:gravity="center"
             android:text="@string/denial_of_service_button"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
     
@@ -53,7 +53,8 @@
 		        android:layout_marginTop="20dp"
 		        android:layout_marginLeft="10dp"
 		        android:layout_marginRight="10dp"
-		        android:text="@string/dos_descr" />
+		        android:text="@string/dos_descr"
+		        android:textColor="#ffffff" />
 		
 		    <TextView
 		        android:id="@+id/preventions"
@@ -64,7 +65,8 @@
 		        android:layout_marginTop="14dp"
 		        android:textSize="22sp"
 		        android:textStyle="bold"
-		        android:text="@string/preventions" />
+		        android:text="@string/preventions"
+		        android:textColor="#ffffff" />
 		
 		     <TextView
 		         android:id="@+id/dos_prev"
@@ -72,16 +74,8 @@
 		         android:layout_height="wrap_content"
 		         android:layout_alignLeft="@+id/dos_descr"
 		         android:layout_below="@+id/preventions"
-		         android:text="@string/dos_prev" />
-		     
-		    <Button
-		        android:id="@+id/ok_button"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id/dos_prev"
-		        android:layout_centerHorizontal="true"
-		        android:layout_marginTop="26dp"
-		        android:text="@string/ok" />		     
+		         android:text="@string/dos_prev" 
+		         android:textColor="#ffffff"/>		     
 		     
 		</RelativeLayout>		     
 		     

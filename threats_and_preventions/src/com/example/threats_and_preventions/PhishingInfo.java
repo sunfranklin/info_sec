@@ -16,9 +16,7 @@ public class PhishingInfo extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_phishing_info);
-		
-		View btnOK = (Button) findViewById(R.id.ok_button);
-		btnOK.setOnClickListener(this);
+
 		View btnBack = (Button) findViewById(R.id.back_button);
 		btnBack.setOnClickListener(this);		
 	}
@@ -33,9 +31,6 @@ public class PhishingInfo extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()) {
-		case R.id.ok_button:
-			startActivity(new Intent(this, ThreatsMenu.class));
-			break;
 		case R.id.back_button:
 			startActivity(new Intent(this, ThreatsMenu.class));
 			break;			
