@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pharming_info" 
-    android:background="@drawable/background">
+    android:background="@drawable/background" >
     
     <LinearLayout
         android:id="@+id/header"
@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:background="#ffffff"
             android:text="Back"
-            android:textColor="#000000"
+            android:textColor="#111111" 
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -29,8 +29,8 @@
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="@string/pharming_button"
-            android:textColor="#000000"
+            android:text="@string/spoof_button"
+            android:textColor="#111111"
             android:textSize="20sp"
             android:textStyle="bold" />
     
@@ -40,12 +40,17 @@
         android:id="@+id/scrollview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="1dp"
+	    android:scrollbarDefaultDelayBeforeFade="500"
         android:layout_below="@+id/header">
         
-        <RelativeLayout 
+        <RelativeLayout
             android:id="@+id/rellayout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">    
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin" >   
 
 		    <TextView
 		        android:id="@+id/pharming_description"
@@ -53,10 +58,8 @@
 		        android:layout_height="wrap_content"
 		        android:layout_centerHorizontal="true"
 		        android:layout_marginTop="20dp"
-		        android:layout_marginLeft="10dp"
-		        android:layout_marginRight="10dp"
-		        android:text="@string/pharming_description"
-		        android:textColor="#ffffff" />
+		        android:textColor="#ffffff"
+		        android:text="@string/pharming_description" />
 		    
 		    <TextView
 		        android:id="@+id/preventions"
@@ -65,10 +68,10 @@
 		        android:layout_below="@+id/pharming_description"
 		        android:layout_centerHorizontal="true"
 		        android:layout_marginTop="17dp"
+		        android:textColor="#ffffff"
 		        android:text="@string/preventions"
 		        android:textSize="22sp"
-		        android:textStyle="bold"
-		        android:textColor="#ffffff" />
+		        android:textStyle="bold" />
 		    
 		    <TextView
 		        android:id="@+id/pharming_prev"
@@ -77,10 +80,18 @@
 		        android:layout_centerHorizontal="true"
 		        android:layout_below="@+id/preventions"
 		        android:layout_marginTop="20dp"
-		        android:layout_marginLeft="10dp"
-		        android:layout_marginRight="10dp"
-		        android:text="@string/pharming_prev"
-		        android:textColor="#ffffff" />	    
+		        android:textColor="#ffffff"
+		        android:text="@string/pharming_prev" />
+		    
+		    <Button
+		        android:id="@+id/ok_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/pharming_prev"
+		        android:layout_centerHorizontal="true"
+		        android:textColor="#ffffff"
+		        android:layout_marginTop="26dp"
+		        android:text="@string/ok" />		    
 		    
 	    </RelativeLayout>
     </ScrollView>

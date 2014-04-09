@@ -61,7 +61,7 @@ public class DatabaseQuiz extends SQLiteOpenHelper {
 	}
 
 	// Adding new Question-Answer
-	public void addQA(QuestionAnswerID questionAnswer) {
+	public void addQA(QuestionAnswer questionAnswer) {
 		SQLiteDatabase dbq = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
@@ -75,7 +75,7 @@ public class DatabaseQuiz extends SQLiteOpenHelper {
 	
 	
 	// Getting single question_Answer
-	public QuestionAnswerID getQuestionAnswer(String ques) {
+	public QuestionAnswer getQuestionAnswer(String ques) {
 	    SQLiteDatabase db = this.getReadableDatabase();
 	 
 	    Cursor cursor = db.query(TABLE_QUESTION_ANSWER, new String[] {
@@ -84,16 +84,16 @@ public class DatabaseQuiz extends SQLiteOpenHelper {
 	    if (cursor != null)
 	        cursor.moveToFirst();
 	 
-	    QuestionAnswerID questionAnswerId = new QuestionAnswerID (cursor.getString(0),
+	    QuestionAnswer questionAnswer = new QuestionAnswer (cursor.getString(0),
 	            cursor.getString(1));
-	    // return question-Answer-ID
-	    return questionAnswerId;
+	    // return question-Answer
+	    return questionAnswer;
 	}
 	
 	
 	// Getting All Question-Answer
-	public List<QuestionAnswerID> getAllQuestionAnswer() {
-		List<QuestionAnswerID> questionAnswerList = new ArrayList<QuestionAnswerID>();
+	public List<QuestionAnswer> getAllQuestionAnswer() {
+		List<QuestionAnswer> questionAnswerList = new ArrayList<QuestionAnswer>();
 		// Select All Query
 		String selectQuery = "SELECT  * FROM " + TABLE_QUESTION_ANSWER;
 
@@ -103,8 +103,7 @@ public class DatabaseQuiz extends SQLiteOpenHelper {
 		// looping through all rows and adding to list
 		if (cursor.moveToFirst()) {
 			do {
-				QuestionAnswerID questionAnswer = new QuestionAnswerID();
-				//questionAnswerId.setID(cursor.getString(0));
+				QuestionAnswer questionAnswer = new QuestionAnswer();
 				questionAnswer.setQuestion(cursor.getString(0));
 				questionAnswer.setAnswer(cursor.getString(1));
 				
@@ -153,22 +152,9 @@ public class DatabaseQuiz extends SQLiteOpenHelper {
         return cursor.getCount();
     }
     
-    // Updating single contact
-//    public int updateQuestionAnswerId(QuestionAnswerID questionAnswerId) {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//     
-//        ContentValues values = new ContentValues();
-//        values.put(KEY_QUESTION, questionAnswerId.getQuestion());
-//        values.put(KEY_ANSWER, questionAnswerId.getAnswer());
-//     
-//        // updating row
-//        return db.update(TABLE_QUESTION_ANSWER, values,KEY_QUESTION + " = ?",
-//                new String[] { String.valueOf(questionAnswerId.getID()) });
-//    }
-    
     
     // Deleting single Question-Answer
-    public void deleteContact(QuestionAnswerID questionAnswerId) {
+    public void deleteQuestionAnswer(QuestionAnswer questionAnswerId) {
     	SQLiteDatabase dbq = this.getWritableDatabase();
     	dbq.delete(TABLE_QUESTION_ANSWER, KEY_QUESTION + " = ?",
     			new String[] { String.valueOf(questionAnswerId.getAnswer()) });

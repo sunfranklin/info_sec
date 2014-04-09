@@ -17,6 +17,8 @@ public class TrojanInfo extends Activity implements OnClickListener {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_trojan_info);
 		
+		View btnOK = (Button) findViewById(R.id.ok_button);
+		btnOK.setOnClickListener(this);
 		View btnBack = (Button) findViewById(R.id.back_button);
 		btnBack.setOnClickListener(this);		
 	}
@@ -31,6 +33,9 @@ public class TrojanInfo extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()) {
+		case R.id.ok_button:
+			startActivity(new Intent(this, ThreatsMenu.class));
+			break;
 		case R.id.back_button:
 			startActivity(new Intent(this, ThreatsMenu.class));
 			break;			

@@ -20,11 +20,12 @@ public class QuizActivity extends Activity implements OnClickListener {
 
 	final Context context = this;
 	int questAnsPosition;
-	List<QuestionAnswerID> questAns;
+	List<QuestionAnswer> questAns;
 	String correctAnswer;
 	private Handler mHandler = new Handler();
 	private int question_counter = 1;
 	private int correct_answers;
+	private int correctAnsPosition;
 	
 	//Buttons View
 	Button  a_button;
@@ -64,36 +65,35 @@ public class QuizActivity extends Activity implements OnClickListener {
 	
 	private void UploadQuestionAnswer(DatabaseQuiz dbquiz)
 	{
-		dbquiz.addQA(new QuestionAnswerID("What kind of information attack involves redirection " +
+		dbquiz.addQA(new QuestionAnswer("What kind of information attack involves redirection " +
 				"of legitimate Web traffic (e.g., browser requests) to an illegitimate" +
 				" site for the purpose of obtaining private information?","Pharming"));
 		
-		dbquiz.addQA(new QuestionAnswerID("Which kind of information attack is best described as " +
+		dbquiz.addQA(new QuestionAnswer("What kind of information attack is best described as " +
 				"an attempt to acquire information such as usernames, passwords, and credit card" +
 				" details by disguising oneself as a trustworthy entity?","Phishing"));
 
-		dbquiz.addQA(new QuestionAnswerID("Which kind of information attack is best described as" +
+		dbquiz.addQA(new QuestionAnswer("What kind of information attack is best described as" +
 				" a program or device that monitors data traveling over a network; can be used " +
 				"both for legitimate purposes and for stealing information from a network?","Sniffer"));
 		
-		dbquiz.addQA(new QuestionAnswerID("Which kind of information attack is best described as" +
+		dbquiz.addQA(new QuestionAnswer("What kind of information attack is best described as" +
 				" a technique used to gain unauthorized access where the intruder assumes" +
 				" a trusted IP address?","Spoofing"));
 		
 		//Questions and answers related to the prevention of attacks
-		dbquiz.addQA(new QuestionAnswerID("What kind of information attack can be prevented" +
+		dbquiz.addQA(new QuestionAnswer("What kind of information attack can be prevented" +
 				" by using strong encryption?","Man-In-The-Middle"));
 		
-		dbquiz.addQA(new QuestionAnswerID("When signing up for a website, making sure that " +
-				"the web master will not sell your address can be a way to prevent...","Spam"));
+		dbquiz.addQA(new QuestionAnswer("When signing up for a website, making sure that " +
+				"the web master will not sell your address can be a way of preventing...","Spam"));
 		
-		dbquiz.addQA(new QuestionAnswerID("Hiding/masking your IP address as much as possible is an effiecient" +
+		dbquiz.addQA(new QuestionAnswer("Hiding/masking your IP address as much as possible is an effiecient" +
 				" way of preventing...","Denial-of-Service (DoS) or Distributed Denial-of-Service (DDoS)"));
 		
-		dbquiz.addQA(new QuestionAnswerID("What kind of information attack can be prevented by using" +
+		dbquiz.addQA(new QuestionAnswer("What kind of information attack can be prevented by using" +
 				" Message-Digest Algorithm (MD5) passwords that confines a \"strong\" password " +
-				"containing numbers, symbols and upper/lower case letters.","Password Crack"));
-		
+				"containing numbers, symbols and upper/lower case letters.","Password Crack"));	
 	}
 
 	
@@ -107,12 +107,15 @@ public class QuizActivity extends Activity implements OnClickListener {
 	    if (correctAnswer.equals(chosenAnswer))
 		{
 //		    chosenOpt.setTextColor(0xff46D246);
-			v.setBackgroundColor(0xff00ff00);
+			v.setBackgroundResource(R.drawable.green_button);
 			correct_answers++;
 		}
 		else {
 //			chosenOpt.setTextColor(0xff971425);
-			v.setBackgroundColor(0xffd11919);
+			v.setBackgroundResource(R.drawable.red_button);
+			//shows the correct answer half second 
+			//after an incorrect answer is selected
+			mHandler.postDelayed(revealCorrectAnswer, 500);
 		}
 	    
 	    //disable buttons so more than one answer isn't selected
@@ -122,8 +125,7 @@ public class QuizActivity extends Activity implements OnClickListener {
 	    d_button.setEnabled(false);
 
 	    //Cause the Runnable to be sent to the Handler after a specified delay in ms:
-	    mHandler.postDelayed(mUpdateTimeTask, 2000);
-	    
+	    mHandler.postDelayed(mUpdateTimeTask, 2000);    
 	}
 	
 	
@@ -172,7 +174,35 @@ public class QuizActivity extends Activity implements OnClickListener {
 			//mHandler.postDelayed(this, 5000 );
 		}
 	};
+	
+	
+	/**
+	 * Define a Runnable that display the correct answer when an incorrect answer is selected.
+	 */
+	private Runnable revealCorrectAnswer = new Runnable() {
+		public void run() {
 
+			switch (correctAnsPosition)
+			{
+			case 1:
+				//correct answer is at option A
+				a_button.setBackgroundResource(R.drawable.green_button);
+				break;
+			case 2:
+				//correct answer is at option B
+				b_button.setBackgroundResource(R.drawable.green_button);
+				break;
+			case 3:
+				//correct answer is at option C
+				c_button.setBackgroundResource(R.drawable.green_button);
+				break;
+			case 4:
+				//correct answer is at option D
+				d_button.setBackgroundResource(R.drawable.green_button);
+				break;
+			}  
+		}
+	};
 	
 	/**
 	 * 
@@ -193,7 +223,7 @@ public class QuizActivity extends Activity implements OnClickListener {
         
         //get the question-answer pair from the list 
         //questAns at pos corresponding to questAnsPosition
-        QuestionAnswerID questionAnswer = questAns.remove(questAnsPosition);
+        QuestionAnswer questionAnswer = questAns.remove(questAnsPosition);
         
         //set question equal to the current question of the quiz 
         question.setText("Question "+question_counter+": "+questionAnswer.getQuestion());
@@ -212,7 +242,7 @@ public class QuizActivity extends Activity implements OnClickListener {
 		wrongAnswer3 = answerList.remove(randInt(0,answerList.size()-1));
 				
         //generate a random integer value between 1-4 
-        int correctAnsPosition = randInt(1,4);
+        correctAnsPosition = randInt(1,4);
         
         switch (correctAnsPosition)
         {
@@ -241,7 +271,7 @@ public class QuizActivity extends Activity implements OnClickListener {
         		d.setText(wrongAnswer1);
         		break;
         	case 4:
-        		//place the correct answer at option A
+        		//place the correct answer at option D
         		d.setText(questionAnswer.getAnswer());
         		//place the wrong answers at remaining options
         		a.setText(wrongAnswer1);

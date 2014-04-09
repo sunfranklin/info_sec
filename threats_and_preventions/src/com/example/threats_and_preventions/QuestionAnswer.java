@@ -1,6 +1,6 @@
 package com.example.threats_and_preventions;
 
-public class QuestionAnswerID {
+public class QuestionAnswer {
 
 	//private variables
 //    private String _id;
@@ -8,30 +8,15 @@ public class QuestionAnswerID {
     private String _answer;
      
     // Empty constructor
-    public QuestionAnswerID (){
+    public QuestionAnswer (){
          
     }
-//    // constructor with question, answer and id
-//    public QuestionAnswerID (String id, String question, String _answer){
-//        this._id = id;
-//        this._question = question;
-//        this._answer = _answer;
-//    }
      
     // constructor with question and answer
-    public QuestionAnswerID (String question, String answer){
+    public QuestionAnswer (String question, String answer){
         this._question = question;
         this._answer = answer;
     }
-//    // getting ID
-//    public String getID(){
-//        return this._id;
-//    }
-     
-//    // setting id
-//    public void setID(String id){
-//        this._id = id;
-//    }
      
     // getting answer
     public String getAnswer(){

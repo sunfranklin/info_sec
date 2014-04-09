@@ -27,7 +27,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="26dp"
-        android:background="#ffffff"
+        android:background="@drawable/button_shape"
         android:text="@string/threats_button" />
 
     <Button
@@ -37,7 +37,7 @@
         android:layout_marginTop="20dp"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/threats_button"
-        android:background="#ffffff"        
+        android:background="@drawable/button_shape"        
         android:text="@string/quiz_button" />
 
 </RelativeLayout>
