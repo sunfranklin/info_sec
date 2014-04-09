@@ -82,16 +82,7 @@
 		        android:layout_marginTop="20dp"
 		        android:textColor="#ffffff"
 		        android:text="@string/spoof_prev" />
-		    
-		    <Button
-		        android:id="@+id/ok_button"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id/spoof_prev"
-		        android:layout_centerHorizontal="true"
-		        android:layout_marginTop="26dp"
-		        android:textColor="#ffffff"
-		        android:text="@string/ok" />		    
+		    		    
 	    </RelativeLayout>
     </ScrollView>
 
